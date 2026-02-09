@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trish's 40th Birthday - Vail, Colorado</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --snow: #f7f8fa;
+  --ice: #e8edf4;
+  --slate: #2d3748;
+  --deep: #1a202c;
+  --pine: #2f5233;
+  --pine-light: #3a6b40;
+  --gold: #c9a84c;
+  --gold-light: #dfc370;
+  --sky: #6ba3c7;
+  --sky-light: #89bdd8;
+  --blush: #d4a0a0;
+  --warm: #f5efe6;
+  --card-bg: rgba(255,255,255,0.92);
+  --shadow: 0 4px 24px rgba(0,0,0,0.08);
+  --shadow-lg: 0 12px 48px rgba(0,0,0,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--slate);
+  background: var(--snow);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.3;
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(26,32,44,0.35) 0%, rgba(26,32,44,0.55) 100%),
+    url('https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1920&q=80') center/cover no-repeat;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(transparent, var(--snow));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  padding: 2rem;
+  animation: fadeUp 1s ease-out;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 0.4rem 1.2rem;
+  border-radius: 40px;
+  color: #fff;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.hero-sub {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: rgba(255,255,255,0.9);
+  font-weight: 300;
+  margin-bottom: 0.8rem;
+}
+
+.hero-date {
+  color: var(--gold-light);
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text {
+  color: rgba(255,255,255,0.85);
+  font-size: 1rem;
+  max-width: 520px;
+  margin: 0 auto 2rem;
+}
+
+.hero-cta {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--deep);
+  padding: 0.85rem 2.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  transition: all 0.3s;
+  margin-bottom: 2rem;
+}
+
+.hero-cta:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201,168,76,0.4);
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ── COUNTDOWN ── */
+.countdown-section {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background: var(--deep);
+  color: #fff;
+}
+
+.countdown-section h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--gold-light);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.countdown-item {
+  text-align: center;
+}
+
+.countdown-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.5);
+  margin-top: 0.3rem;
+}
+
+/* ── SECTIONS ── */
+.section {
+  padding: 5rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-alt {
+  background: var(--warm);
+}
+
+.section-dark {
+  background: var(--deep);
+  color: #fff;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: var(--deep);
+  margin-bottom: 0.6rem;
+}
+
+.section-dark .section-header h2 {
+  color: #fff;
+}
+
+.section-header p {
+  color: #718096;
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section-dark .section-header p {
+  color: rgba(255,255,255,0.6);
+}
+
+/* ── INVITE ── */
+.invite-box {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.invite-box p {
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+}
+
+.invite-list {
+  list-style: none;
+  padding: 0;
+}
+
+.invite-list li {
+  padding: 0.6rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.invite-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.invite-list strong {
+  color: var(--deep);
+}
+
+/* ── TRANSPORT ── */
+.transport-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.transport-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: var(--shadow);
+  border-top: 3px solid var(--pine);
+}
+
+.transport-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+  color: var(--deep);
+}
+
+.transport-card p {
+  font-size: 0.92rem;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.transport-card a {
+  color: var(--pine);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.transport-card a:hover { text-decoration: underline; }
+
+/* ── HOUSE ── */
+.house-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.house-intro p {
+  font-size: 1.05rem;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.house-intro a {
+  color: var(--pine);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.house-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.house-gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.house-gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* ── ROOMS ── */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.room-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.room-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.room-card-img {
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(135deg, var(--ice), var(--sky-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.room-card-body {
+  padding: 1.2rem;
+}
+
+.room-card-body h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.room-card-body .room-detail {
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.room-card-body .room-floor {
+  font-size: 0.8rem;
+  color: var(--pine);
+  font-weight: 500;
+  margin-top: 0.3rem;
+}
+
+/* ── AVAILABILITY TABLE ── */
+.avail-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.avail-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  min-width: 700px;
+}
+
+.avail-table th, .avail-table td {
+  padding: 0.7rem 0.6rem;
+  text-align: center;
+  font-size: 0.82rem;
+  border: 1px solid #e2e8f0;
+}
+
+.avail-table thead th {
+  background: var(--deep);
+  color: #fff;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.avail-table thead th:first-child {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.avail-table tbody td:first-child {
+  text-align: left;
+  padding-left: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  background: #fafbfc;
+}
+
+.avail-table .avail {
+  background: #c6f6d5;
+}
+
+.avail-legend {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.avail-legend span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.legend-dot.available { background: #c6f6d5; border: 1px solid #9ae6b4; }
+.legend-dot.booked { background: #fed7d7; border: 1px solid #feb2b2; }
+
+.avail-note {
+  text-align: center;
+  font-size: 0.88rem;
+  color: #718096;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ── SKI COMPARISON ── */
+.ski-table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.ski-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  min-width: 600px;
+}
+
+.ski-table th, .ski-table td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.ski-table thead th {
+  background: var(--pine);
+  color: #fff;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.ski-table tbody tr:hover {
+  background: #f7fafc;
+}
+
+.ski-table td:first-child {
+  font-weight: 600;
+  color: var(--deep);
+}
+
+.ski-tips {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.ski-tips h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--deep);
+}
+
+.ski-tips ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ski-tips li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.92rem;
+}
+
+.ski-tips li::before {
+  content: '⛷';
+  position: absolute;
+  left: 0;
+}
+
+.ski-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.ski-link {
+  display: inline-block;
+  background: var(--pine);
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.ski-link:hover {
+  background: var(--pine-light);
+  transform: translateY(-2px);
+}
+
+/* ── ACTIVITIES ── */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.activity-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+}
+
+.activity-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.activity-body {
+  padding: 1.5rem;
+}
+
+.activity-body h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.activity-body p {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-bottom: 0.8rem;
+}
+
+.activity-body a {
+  color: var(--pine);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.88rem;
+}
+
+/* ── BUDGET ── */
+.budget-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.budget-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: var(--shadow);
+}
+
+.budget-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid var(--gold);
+  color: var(--deep);
+}
+
+.budget-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.45rem 0;
+  font-size: 0.9rem;
+}
+
+.budget-row .label { color: #4a5568; }
+.budget-row .price { font-weight: 600; color: var(--deep); }
+
+.budget-tip {
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.85rem;
+  color: var(--pine);
+  font-weight: 500;
+}
+
+/* ── WEATHER ── */
+.weather-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.weather-card {
+  text-align: center;
+  padding: 2rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  min-width: 160px;
+}
+
+.weather-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.weather-val {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--deep);
+}
+
+.weather-label {
+  font-size: 0.8rem;
+  color: #718096;
+  margin-top: 0.2rem;
+}
+
+.dates-box {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dates-box h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--deep);
+}
+
+.date-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  font-size: 0.92rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.date-row:last-child { border: none; }
+
+.date-row .date-label { color: #4a5568; }
+.date-row .date-val { font-weight: 600; color: var(--deep); }
+
+/* ── PHOTO GALLERY ── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.8rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ── FOOTER ── */
+.footer {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: var(--deep);
+  color: rgba(255,255,255,0.5);
+  font-size: 0.85rem;
+}
+
+.footer strong {
+  color: var(--gold-light);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .hero-stats { gap: 0.8rem; }
+  .hero-stat { font-size: 0.78rem; padding: 0.4rem 0.8rem; }
+  .section { padding: 3rem 1rem; }
+  .invite-box { padding: 1.5rem; }
+  .countdown-num { font-size: 2rem; }
+  .rooms-grid { grid-template-columns: 1fr 1fr; }
+  .activities-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">You're Invited</div>
+    <h1>Celebrating Trish</h1>
+    <p class="hero-sub">You're Invited to Vail!</p>
+    <p class="hero-date">March 14–21, 2026 · Vail, Colorado</p>
+    <p class="hero-text">Join us for a week in Vail celebrating Trish's 40th birthday. Come for one night or all seven—we'd love to have you there.</p>
+    <a href="#rooms" class="hero-cta">RSVP by February 28th</a>
+    <div class="hero-stats">
+      <span class="hero-stat">7 Amazing Nights</span>
+      <span class="hero-stat">Luxury Mountain Chalet</span>
+      <span class="hero-stat">World-Class Skiing</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ COUNTDOWN ═══════ -->
+<section class="countdown-section">
+  <h3>Countdown to Vail</h3>
+  <div class="countdown" id="countdown">
+    <div class="countdown-item"><div class="countdown-num" id="cd-days">--</div><div class="countdown-label">Days</div></div>
+    <div class="countdown-item"><div class="countdown-num" id="cd-hours">--</div><div class="countdown-label">Hours</div></div>
+    <div class="countdown-item"><div class="countdown-num" id="cd-mins">--</div><div class="countdown-label">Mins</div></div>
+    <div class="countdown-item"><div class="countdown-num" id="cd-secs">--</div><div class="countdown-label">Secs</div></div>
+  </div>
+</section>
+
+<!-- ═══════ INVITE ═══════ -->
+<section class="section">
+  <div class="section-header">
+    <h2>You're Invited!</h2>
+    <p>We're gathering in Vail to celebrate Trish—her warmth, her spirit, and all the joy she brings to our lives.</p>
+  </div>
+  <div class="invite-box">
+    <p>This trip is about creating memories together in the mountains, and <strong>you're invited to join us for any or all of it!</strong></p>
+    <ul class="invite-list">
+      <li><strong>Come for 1 night or all 7</strong> — Whatever works for your schedule!</li>
+      <li><strong>Reserve your room below</strong> — First come, first serve on room selection</li>
+      <li><strong>$300 suggested contribution per room/night</strong> — Coordinate payment with Niki Reid. If this is a stretch financially, please reach out—we want you there!</li>
+      <li><strong>Covers accommodation only</strong> — Ski tickets, meals, and rentals are separate</li>
+      <li><strong>Let us know by February 28th</strong> — We may downsize the house if needed</li>
+      <li><strong>Prefer to stay elsewhere?</strong> — No hard feelings at all! Book your own place and join us for activities, meals, and celebrations. We just want to spend time with you!</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════ GETTING AROUND ═══════ -->
+<section class="section section-alt">
+  <div class="section-header">
+    <h2>Getting Around</h2>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="transport-grid">
+      <div class="transport-card">
+        <h3>🚌 Free Vail Bus</h3>
+        <p>East Vail has a free bus stop steps from the house. The free Vail bus system runs frequently, connecting to Vail Village, Lionshead, and the ski lifts—no car needed once you're here.</p>
+        <a href="https://www.vailgov.com/bus-schedules" target="_blank">Vail Bus Schedules →</a>
+      </div>
+      <div class="transport-card">
+        <h3>✈️ From Denver (DEN) or Eagle (EGE)</h3>
+        <p><strong>Eagle Airport (EGE):</strong> Only 35 minutes to Vail. Seasonal flights available. Uber/Lyft ~$50–80.</p>
+        <p><strong>Denver Airport (DEN):</strong> ~2 hours to Vail via I-70. Uber/Lyft ~$250+ or shuttle services ~$80–100/person.</p>
+        <a href="https://www.epicmountainexpress.com/" target="_blank">Epic Mountain Express Shuttle →</a>
+      </div>
+      <div class="transport-card">
+        <h3>🚗 Rental Car (Recommended)</h3>
+        <p>AWD or 4WD is <strong>strongly recommended</strong> in winter due to mountain roads and I-70 conditions. The house has a 2-car garage + 2 additional parking spaces.</p>
+        <p>Alternatively, carpool with others in the group!</p>
+      </div>
+      <div class="transport-card">
+        <h3>📍 Property Address</h3>
+        <p style="font-weight:600;font-size:1rem;">East Vail, Colorado</p>
+        <p>Located at the end of a quiet cul-de-sac with stunning Gore Range views. 10-minute drive to Vail Village.</p>
+        <a href="https://maps.google.com/?q=East+Vail,+Colorado" target="_blank">Open in Google Maps →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ OUR MOUNTAIN HOME ═══════ -->
+<section class="section">
+  <div class="section-header">
+    <h2>Our Mountain Chalet</h2>
+  </div>
+  <div class="house-intro">
+    <p>Charming East Vail ski chalet with stunning Gore Range views, hot tub, fire pit, and 5 levels of living space. Located at the end of a quiet cul-de-sac—10 minutes to Vail Village.</p>
+    <a href="https://www.airbnb.com/rooms/1598030359586694222" target="_blank">View full Airbnb listing →</a> (already booked for our group)
+  </div>
+  <div class="house-gallery">
+    <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1598030359586694222/original/07034f0a-74a0-4a00-b92b-176d697cba8c.jpeg?im_w=720" alt="Mountain chalet exterior">
+    <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1598030359586694222/original/789ff0cb-740f-40c5-8dc4-979825da3288.jpeg?im_w=720" alt="Living area with mountain views">
+    <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1598030359586694222/original/322b51b0-b52f-405a-84ff-b02cde83f8c8.jpeg?im_w=720" alt="Kitchen and dining area">
+    <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1598030359586694222/original/589d0c3c-0c64-48e3-8cf0-f5c7ab5b774d.jpeg?im_w=720" alt="Bedroom">
+    <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1598030359586694222/original/b2d8c8e7-be7a-4e76-991d-582658d92f67.jpeg?im_w=720" alt="Outdoor area">
+  </div>
+  <div style="max-width:780px;margin:0 auto;">
+    <div class="invite-box" style="font-size:0.92rem;">
+      <h3 style="margin-bottom:1rem;">House Highlights</h3>
+      <ul class="invite-list">
+        <li><strong>5 levels</strong> of living space with multiple gathering areas</li>
+        <li><strong>6 bedrooms, 4 bathrooms</strong> — sleeps up to 12 guests</li>
+        <li><strong>Hot tub & fire pit</strong> on the back patio</li>
+        <li><strong>BBQ grill</strong> and outdoor dining for 6</li>
+        <li><strong>Gas fireplace</strong> in the main living area with expansive mountain views</li>
+        <li><strong>Fully stocked kitchen</strong> with dining for 8 + bar seating for 3</li>
+        <li><strong>2-car garage</strong> with direct interior access</li>
+        <li><strong>Washer/dryer</strong> on-site</li>
+        <li><strong>WiFi + Smart TVs</strong> throughout</li>
+        <li><strong>Pet friendly</strong> 🐾</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ ROOMS ═══════ -->
+<section class="section section-alt" id="rooms">
+  <div class="section-header">
+    <h2>Reserve Your Room</h2>
+    <p>Choose your room and nights below. First come, first serve!</p>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="rooms-grid">
+      <div class="room-card">
+        <div class="room-card-img">👑</div>
+        <div class="room-card-body">
+          <h3>Master King</h3>
+          <div class="room-detail">1 King Bed + Sofa, TV</div>
+          <div class="room-floor">5th Floor · En suite bath · Mountain views</div>
+        </div>
+      </div>
+      <div class="room-card">
+        <div class="room-card-img">🛏️</div>
+        <div class="room-card-body">
+          <h3>Queen #1</h3>
+          <div class="room-detail">1 Queen Bed</div>
+          <div class="room-floor">1st Floor · Shared bath</div>
+        </div>
+      </div>
+      <div class="room-card">
+        <div class="room-card-img">🛏️</div>
+        <div class="room-card-body">
+          <h3>Queen #2</h3>
+          <div class="room-detail">1 Queen Bed</div>
+          <div class="room-floor">1st Floor · Shared bath</div>
+        </div>
+      </div>
+      <div class="room-card">
+        <div class="room-card-img">🛏️</div>
+        <div class="room-card-body">
+          <h3>Queen #3</h3>
+          <div class="room-detail">1 Queen Bed, TV</div>
+          <div class="room-floor">2nd Floor · Private bath</div>
+        </div>
+      </div>
+      <div class="room-card">
+        <div class="room-card-img">🛏️</div>
+        <div class="room-card-body">
+          <h3>Queen #4</h3>
+          <div class="room-detail">1 Queen Bed</div>
+          <div class="room-floor">4th Floor · Private bath</div>
+        </div>
+      </div>
+      <div class="room-card">
+        <div class="room-card-img">🛏️</div>
+        <div class="room-card-body">
+          <h3>Twin Room</h3>
+          <div class="room-detail">2 Single Beds</div>
+          <div class="room-floor">1st Floor · Shared bath</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Availability Table -->
+    <div class="avail-legend">
+      <span><span class="legend-dot available"></span> Available</span>
+      <span><span class="legend-dot booked"></span> Booked</span>
+    </div>
+    <div class="avail-wrapper">
+      <table class="avail-table">
+        <thead>
+          <tr>
+            <th>Room</th>
+            <th>Sat<br>Mar 14<br><small>Check-in 4pm</small></th>
+            <th>Sun<br>Mar 15</th>
+            <th>Mon<br>Mar 16</th>
+            <th>Tue<br>Mar 17</th>
+            <th>Wed<br>Mar 18</th>
+            <th>Thu<br>Mar 19</th>
+            <th>Fri<br>Mar 20</th>
+            <th>Sat<br>Mar 21<br><small>Checkout 10am</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Master King</td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td></tr>
+          <tr><td>Queen #1</td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td></tr>
+          <tr><td>Queen #2</td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td></tr>
+          <tr><td>Queen #3</td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td></tr>
+          <tr><td>Queen #4</td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td></tr>
+          <tr><td>Twin Room</td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="avail-note"><strong>Note:</strong> $300 suggested contribution per room/night. Rooms can be shared by multiple people! This covers accommodation only—ski tickets, meals, and rentals are separate.</p>
+  </div>
+</section>
+
+<!-- ═══════ SKI RESORTS ═══════ -->
+<section class="section">
+  <div class="section-header">
+    <h2>Two World-Class Ski Resorts</h2>
+    <p>You have access to both Vail Mountain and Beaver Creek—choose based on your budget and skiing style!</p>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="ski-table-wrap">
+      <table class="ski-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Vail Mountain</th>
+            <th>Beaver Creek</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Full Day Ticket (window)</td><td>$250–356</td><td>$250–356</td></tr>
+          <tr><td>30+ Days Advance</td><td>~$199 ⭐</td><td>~$199 ⭐</td></tr>
+          <tr><td>7 Days Advance</td><td>~$259</td><td>~$259</td></tr>
+          <tr><td>Half Day (afternoon)</td><td>Available at window</td><td>Available at window</td></tr>
+          <tr><td>Epic Pass Holder</td><td>✓ Unlimited access</td><td>✓ Unlimited access</td></tr>
+          <tr><td>Terrain</td><td>5,317 acres · 195 runs · 31 lifts</td><td>2,082 acres · 173 runs · 25 lifts</td></tr>
+          <tr><td>Snowboarding</td><td>✓ Allowed</td><td>✓ Allowed</td></tr>
+          <tr><td>Drive from House</td><td>~10 minutes (+ free bus)</td><td>~25 minutes</td></tr>
+          <tr><td>Best For</td><td>Huge terrain, Back Bowls, variety</td><td>Luxury, grooming, family-friendly</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ski-tips">
+      <h3>Money-Saving Tips</h3>
+      <ul>
+        <li><strong>Buy 30+ days in advance:</strong> Save over $100/ticket at Vail and Beaver Creek—prices drop to ~$199 vs. $300+ at the window</li>
+        <li><strong>Epic Friend Tickets:</strong> If anyone in the group has an Epic Pass, they can offer 50% off window rates to friends</li>
+        <li><strong>Turn In Your Ticket:</strong> Apply up to $175 of your lift ticket cost toward a 2026-27 Epic Pass</li>
+        <li><strong>Mix it up:</strong> Ski Vail one day, try Beaver Creek the next for variety</li>
+      </ul>
+      <div class="ski-links">
+        <a href="https://www.vail.com/plan-your-trip/lift-access/tickets.aspx" target="_blank" class="ski-link">Vail Tickets</a>
+        <a href="https://www.beavercreek.com/plan-your-trip/lift-access/tickets.aspx" target="_blank" class="ski-link">Beaver Creek Tickets</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ BEYOND THE SLOPES ═══════ -->
+<section class="section section-alt">
+  <div class="section-header">
+    <h2>Beyond the Slopes</h2>
+    <p>Vail offers amazing experiences for everyone—whether you ski or not!</p>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="activities-grid">
+      <div class="activity-card">
+        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80" alt="Vail Village" class="activity-img">
+        <div class="activity-body">
+          <h3>Vail Village & Lionshead</h3>
+          <p>Charming Bavarian-inspired villages with world-class shopping, art galleries, restaurants, and a lively après-ski scene. Free gondola rides for scenic views.</p>
+          <a href="https://discovervail.com/" target="_blank">Explore Vail Village →</a>
+        </div>
+      </div>
+      <div class="activity-card">
+        <img src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=600&q=80" alt="Dog Sledding" class="activity-img">
+        <div class="activity-body">
+          <h3>Adventure Activities</h3>
+          <p>Dog sledding, snowmobiling, snowshoeing, snow tubing, ice climbing, and horse-drawn sleigh rides with dinner at 4 Eagle Ranch.</p>
+          <a href="https://discovervail.com/blog/winter-in-vail-activities-reservations/" target="_blank">View Activities →</a>
+        </div>
+      </div>
+      <div class="activity-card">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Spa" class="activity-img">
+        <div class="activity-body">
+          <h3>Spa & Wellness</h3>
+          <p>World-class spas at The Sebastian, Four Seasons Vail, and The Arrabelle. Or take a day trip to Glenwood Hot Springs (1 hour away).</p>
+          <a href="https://www.fourseasons.com/vail/spa/" target="_blank">Spa Options →</a>
+        </div>
+      </div>
+      <div class="activity-card">
+        <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&q=80" alt="Ice Skating" class="activity-img">
+        <div class="activity-body">
+          <h3>Ice Skating</h3>
+          <p>Outdoor skating at Solaris Plaza (Vail Village) or Arrabelle Square (Lionshead)—surrounded by twinkling lights and mountain views. Rentals available on-site.</p>
+          <a href="https://discovervail.com/" target="_blank">Learn More →</a>
+        </div>
+      </div>
+      <div class="activity-card">
+        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&q=80" alt="Dining" class="activity-img">
+        <div class="activity-body">
+          <h3>Dining & Après-Ski</h3>
+          <p>From mountaintop dining at The 10th to lively après at Express Lift Bar and Garfinkel's. Don't miss the legendary cookies at Beaver Creek!</p>
+          <a href="https://discovervail.com/dining-guide/" target="_blank">Dining Guide →</a>
+        </div>
+      </div>
+      <div class="activity-card">
+        <img src="https://images.unsplash.com/photo-1482192505345-5655af888cc4?w=600&q=80" alt="Glenwood Springs" class="activity-img">
+        <div class="activity-body">
+          <h3>Glenwood Hot Springs</h3>
+          <p>The world's largest mineral hot springs pool—just one hour from Vail. Perfect recovery day after skiing. Also check out Iron Mountain Hot Springs.</p>
+          <a href="https://www.hotspringspool.com/" target="_blank">Visit Glenwood Springs →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ BUDGET ═══════ -->
+<section class="section">
+  <div class="section-header">
+    <h2>Budget Your Trip</h2>
+    <p>The $300/room/night covers accommodation only—plan for these additional expenses.</p>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="budget-grid">
+      <div class="budget-card">
+        <h3>🎿 Ski Lift Tickets</h3>
+        <div class="budget-row"><span class="label">Vail / Beaver Creek (window)</span><span class="price">$250–356</span></div>
+        <div class="budget-row"><span class="label">30+ days advance</span><span class="price">~$199 ⭐</span></div>
+        <div class="budget-row"><span class="label">7 days advance</span><span class="price">~$259</span></div>
+        <div class="budget-row"><span class="label">Epic Friend (50% off)</span><span class="price">~$125–178</span></div>
+        <div class="budget-tip">⛷ Buy 30+ days ahead for massive savings! Ask the group if anyone has an Epic Pass for friend tickets.</div>
+      </div>
+      <div class="budget-card">
+        <h3>🎿 Ski & Snowboard Rentals</h3>
+        <div class="budget-row"><span class="label">Standard package (1 day)</span><span class="price">$60–90</span></div>
+        <div class="budget-row"><span class="label">Performance package</span><span class="price">$90–130/day</span></div>
+        <div class="budget-row"><span class="label">Multi-day rental (7 days)</span><span class="price">$350–550</span></div>
+        <div class="budget-tip">⛷ Multi-day rentals save big. Book ahead online for best rates.</div>
+      </div>
+      <div class="budget-card">
+        <h3>🍽️ Food & Dining</h3>
+        <div class="budget-row"><span class="label">Groceries (per person/week)</span><span class="price">~$100–150</span></div>
+        <div class="budget-row"><span class="label">Casual dining (per meal)</span><span class="price">~$25–45</span></div>
+        <div class="budget-row"><span class="label">Nice restaurant (per meal)</span><span class="price">~$60–100</span></div>
+        <div class="budget-tip">🍳 We'll pool groceries and cook together. Vail dining is pricier than average—cooking at the house saves a ton!</div>
+      </div>
+      <div class="budget-card">
+        <h3>🚗 Transportation</h3>
+        <div class="budget-row"><span class="label">Eagle Airport → Vail (Uber)</span><span class="price">~$50–80</span></div>
+        <div class="budget-row"><span class="label">Denver Airport → Vail (shuttle)</span><span class="price">~$80–100</span></div>
+        <div class="budget-row"><span class="label">Denver Airport → Vail (Uber)</span><span class="price">~$250+</span></div>
+        <div class="budget-row"><span class="label">Free Vail bus</span><span class="price">FREE 🎉</span></div>
+        <div class="budget-tip">🚌 Free Vail bus goes everywhere you need! Eagle (EGE) airport is much closer if flights are available.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ WEATHER ═══════ -->
+<section class="section section-alt">
+  <div class="section-header">
+    <h2>March Weather</h2>
+    <p>Vail in March offers perfect spring skiing—sunny days, excellent snow, and comfortable temperatures.</p>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="weather-grid">
+      <div class="weather-card">
+        <div class="weather-icon">☀️</div>
+        <div class="weather-val">35–45°F</div>
+        <div class="weather-label">Daytime Highs</div>
+      </div>
+      <div class="weather-card">
+        <div class="weather-icon">🌙</div>
+        <div class="weather-val">10–20°F</div>
+        <div class="weather-label">Nighttime Lows</div>
+      </div>
+      <div class="weather-card">
+        <div class="weather-icon">❄️</div>
+        <div class="weather-val">Excellent</div>
+        <div class="weather-label">Snow Coverage</div>
+      </div>
+      <div class="weather-card">
+        <div class="weather-icon">⛰️</div>
+        <div class="weather-val">8,150 ft</div>
+        <div class="weather-label">Base Elevation</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-bottom:2rem;">
+      <p style="font-size:0.92rem;color:#718096;margin-bottom:0.5rem;">Check the detailed forecast as your trip approaches. <strong>Altitude tip:</strong> Vail sits at 8,150 ft—drink lots of water, take it easy your first day, and be prepared for the altitude!</p>
+      <a href="https://weather.com/weather/tenday/l/Vail+CO" target="_blank" style="color:var(--pine);font-weight:600;text-decoration:none;">View Vail Weather Forecast →</a>
+    </div>
+    <div class="dates-box">
+      <h3>Important Dates</h3>
+      <div class="date-row"><span class="date-label">Trip dates (7 nights)</span><span class="date-val">March 14–21, 2026</span></div>
+      <div class="date-row"><span class="date-label">RSVP deadline</span><span class="date-val">February 28, 2026</span></div>
+      <div class="date-row"><span class="date-label">Check-in</span><span class="date-val">4:00 PM</span></div>
+      <div class="date-row"><span class="date-label">Checkout</span><span class="date-val">10:00 AM</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CELEBRATING TRISH ═══════ -->
+<section class="section">
+  <div class="section-header">
+    <h2>Celebrating Trish 👑</h2>
+    <p>40th Birthday Queen — Share your favorite memories and celebrate the amazing person this trip is all about!</p>
+  </div>
+  <div class="gallery-grid" style="max-width:1100px;margin:0 auto;">
+    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/JpsahaVUpovRruTs.png" alt="Trish & Family">
+    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/zMqPdrDMCPUdAJPx.png" alt="Memory 1">
+    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/DFWvgQgDmdpkbYnc.png" alt="Memory 2">
+    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/rASZpsjkgqYilqSm.png" alt="Memory 3">
+    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/aMLciSxxjupKdUlz.png" alt="Memory 4">
+    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/eXVLdiMDUoScIbuW.png" alt="Memory 5">
+    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/coSrIzSKYodZxcPP.png" alt="Memory 6">
+    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/BAeHcdqRdynuciDW.png" alt="Memory 7">
+    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/ldeUKXKoJvfzktyA.png" alt="Memory 8">
+    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/ULdySKwBdrLAfsPQ.png" alt="Memory 9">
+    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/mYidsCexbbErYkwc.png" alt="Memory 10">
+    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/WLlqCKiWvDXeNIVy.png" alt="Memory 11">
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer class="footer">
+  <p><strong>Celebrating Trish</strong> · Vail, Colorado · March 14–21, 2026</p>
+  <p style="margin-top:0.5rem;">Questions? Coordinate with <strong>Niki Reid</strong></p>
+</footer>
+
+<!-- ═══════ COUNTDOWN SCRIPT ═══════ -->
+<script>
+function updateCountdown() {
+  const target = new Date('2026-03-14T16:00:00-07:00');
+  const now = new Date();
+  const diff = target - now;
+  if (diff <= 0) {
+    document.getElementById('cd-days').textContent = '🎉';
+    document.getElementById('cd-hours').textContent = '';
+    document.getElementById('cd-mins').textContent = '';
+    document.getElementById('cd-secs').textContent = '';
+    return;
+  }
+  const d = Math.floor(diff / (1000*60*60*24));
+  const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+  const m = Math.floor((diff % (1000*60*60)) / (1000*60));
+  const s = Math.floor((diff % (1000*60)) / 1000);
+  document.getElementById('cd-days').textContent = d;
+  document.getElementById('cd-hours').textContent = h;
+  document.getElementById('cd-mins').textContent = m;
+  document.getElementById('cd-secs').textContent = s;
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+</body>
+</html>
