@@ -676,23 +676,85 @@ h1, h2, h3, h4 {
 
 /* ── PHOTO GALLERY ── */
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 0.8rem;
+  columns: 4;
+  column-gap: 0.6rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
+
+@media (max-width: 900px) { .gallery-grid { columns: 3; } }
+@media (max-width: 600px) { .gallery-grid { columns: 2; } }
 
 .gallery-grid img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  display: block;
+  margin-bottom: 0.6rem;
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
+  break-inside: avoid;
 }
 
 .gallery-grid img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   box-shadow: var(--shadow-lg);
+  cursor: pointer;
 }
+
+/* ── LIGHTBOX ── */
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 0 60px rgba(0,0,0,0.5);
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.lightbox-nav:hover { background: rgba(255,255,255,0.3); }
+.lightbox-prev { left: 1rem; }
+.lightbox-next { right: 1rem; }
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  color: #fff;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.lightbox-close:hover { opacity: 1; }
 
 /* ── FOOTER ── */
 .footer {
@@ -1246,24 +1308,37 @@ h1, h2, h3, h4 {
 <!-- ═══════ CELEBRATING TRISH ═══════ -->
 <section class="section">
   <div class="section-header">
-    <h2>Celebrating Trish 👑</h2>
-    <p>40th Birthday Queen — Share your favorite memories and celebrate the amazing person this trip is all about!</p>
+    <h2>Celebrating Trish</h2>
+    <p>The birthday queen and the people who love her most. Here's to 40 incredible years!</p>
   </div>
-  <div class="gallery-grid" style="max-width:1100px;margin:0 auto;">
-    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/JpsahaVUpovRruTs.png" alt="Trish & Family">
-    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/zMqPdrDMCPUdAJPx.png" alt="Memory 1">
-    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/DFWvgQgDmdpkbYnc.png" alt="Memory 2">
-    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/rASZpsjkgqYilqSm.png" alt="Memory 3">
-    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/aMLciSxxjupKdUlz.png" alt="Memory 4">
-    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/eXVLdiMDUoScIbuW.png" alt="Memory 5">
-    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/coSrIzSKYodZxcPP.png" alt="Memory 6">
-    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/BAeHcdqRdynuciDW.png" alt="Memory 7">
-    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/ldeUKXKoJvfzktyA.png" alt="Memory 8">
-    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/ULdySKwBdrLAfsPQ.png" alt="Memory 9">
-    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/mYidsCexbbErYkwc.png" alt="Memory 10">
-    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663280322187/WLlqCKiWvDXeNIVy.png" alt="Memory 11">
+  <div class="gallery-grid">
+    <img src="images/pasted_file_RBF7An_image.png" alt="Friends & Family">
+    <img src="images/pasted_file_OG8PTY_image.png" alt="Celebration">
+    <img src="images/pasted_file_sf90Co_image.png" alt="Good times">
+    <img src="images/pasted_file_Lfsnqi_image.png" alt="Together">
+    <img src="images/pasted_file_lQLx3B_image.png" alt="Friends">
+    <img src="images/pasted_file_OWQVJi_image.png" alt="Memories">
+    <img src="images/pasted_file_a3IqzC_image.png" alt="Smiles">
+    <img src="images/pasted_file_2OLILO_image.png" alt="Adventures">
+    <img src="images/pasted_file_fAJQtc_image.png" alt="Laughs">
+    <img src="images/pasted_file_gVkeDf_image.png" alt="Best friends">
+    <img src="images/pasted_file_HCNObS_image.png" alt="Family">
+    <img src="images/pasted_file_I6DAzW_image.png" alt="Love">
+    <img src="images/pasted_file_IAjNUF_image.png" alt="Cheers">
+    <img src="images/pasted_file_UbXQTe_image.png" alt="Squad">
+    <img src="images/pasted_file_utmD8h_image.png" alt="Party time">
+    <img src="images/pasted_file_vZQ2PL_image.png" alt="Happiness">
+    <img src="images/pasted_file_WhEizx_image.png" alt="Forever friends">
   </div>
 </section>
+
+<!-- ═══════ LIGHTBOX ═══════ -->
+<div class="lightbox-overlay" id="lightbox">
+  <button class="lightbox-close" id="lb-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lb-prev">&#8249;</button>
+  <img src="" alt="Photo" id="lb-img">
+  <button class="lightbox-nav lightbox-next" id="lb-next">&#8250;</button>
+</div>
 
 <!-- ═══════ FOOTER ═══════ -->
 <footer class="footer">
@@ -1367,6 +1442,39 @@ setInterval(updateCountdown, 1000);
 
       cell.appendChild(input);
     });
+  });
+})();
+</script>
+
+<!-- ═══════ LIGHTBOX SCRIPT ═══════ -->
+<script>
+(function() {
+  var imgs = Array.from(document.querySelectorAll('.gallery-grid img'));
+  var overlay = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lb-img');
+  var idx = 0;
+
+  function show(i) {
+    idx = (i + imgs.length) % imgs.length;
+    lbImg.src = imgs[idx].src;
+    overlay.classList.add('active');
+  }
+
+  imgs.forEach(function(img, i) {
+    img.addEventListener('click', function() { show(i); });
+  });
+
+  document.getElementById('lb-prev').addEventListener('click', function(e) { e.stopPropagation(); show(idx - 1); });
+  document.getElementById('lb-next').addEventListener('click', function(e) { e.stopPropagation(); show(idx + 1); });
+  document.getElementById('lb-close').addEventListener('click', function() { overlay.classList.remove('active'); });
+  overlay.addEventListener('click', function() { overlay.classList.remove('active'); });
+  lbImg.addEventListener('click', function(e) { e.stopPropagation(); });
+
+  document.addEventListener('keydown', function(e) {
+    if (!overlay.classList.contains('active')) return;
+    if (e.key === 'Escape') overlay.classList.remove('active');
+    if (e.key === 'ArrowLeft') show(idx - 1);
+    if (e.key === 'ArrowRight') show(idx + 1);
   });
 })();
 </script>
