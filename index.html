@@ -967,11 +967,35 @@ h1, h2, h3, h4 {
   </div>
   <div style="max-width:1100px;margin:0 auto;">
     <div class="transport-grid">
-      <div class="transport-card">
-        <h3>🚌 Free Vail Bus</h3>
-        <p>The nearest stop is <strong>East Vail / Main Gore Drive</strong>—about a <strong>10-minute walk (0.4 mi)</strong> from the house. Heads up: it's uphill, at altitude, and possibly icy, so plan accordingly! The free bus connects to Vail Village, Lionshead, and the ski lifts.</p>
-        <p style="font-size:0.85rem;color:#718096;margin-top:0.5rem;">For most trips, a rental car or rideshare will be easier than the bus from this house.</p>
-        <a href="https://www.vailgov.com/bus-schedules" target="_blank">Vail Bus Schedules →</a>
+      <div class="transport-card" style="grid-column: 1 / -1;">
+        <h3>🚌 Free Vail Bus — East Vail Route</h3>
+        <p>Vail runs a <strong>100% free bus system</strong> year-round. The <strong>East Vail Route</strong> is the line that serves our neighborhood. It runs along the South Frontage Road and Main Gore Drive, connecting East Vail to <strong>Vail Village</strong>, <strong>Lionshead</strong>, and the ski lifts.</p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;padding:1rem;background:#f0fdf4;border-radius:8px;">
+          <div>
+            <p style="margin:0;font-weight:600;color:var(--deep);">📍 Nearest Stop</p>
+            <p style="margin:0.3rem 0 0;">Main Gore Dr & Bighorn Rd<br><strong>0.4 mi / ~10 min walk</strong> from house</p>
+          </div>
+          <div>
+            <p style="margin:0;font-weight:600;color:var(--deep);">⏱ Frequency</p>
+            <p style="margin:0.3rem 0 0;">Every <strong>20–60 minutes</strong><br>depending on time of day</p>
+          </div>
+          <div>
+            <p style="margin:0;font-weight:600;color:var(--deep);">🎿 Ski Gear</p>
+            <p style="margin:0.3rem 0 0;">Skis & snowboards <strong>allowed</strong> on board (keep aisles clear)</p>
+          </div>
+          <div>
+            <p style="margin:0;font-weight:600;color:var(--deep);">🗺 Key Stops</p>
+            <p style="margin:0.3rem 0 0;">East Vail → Vail Village → Lionshead → West Vail</p>
+          </div>
+        </div>
+
+        <p style="font-size:0.85rem;color:#718096;">⚠️ The walk to the bus stop is uphill, at altitude (~8,200 ft), and possibly icy. For most trips from this house, a rental car or rideshare will be easier.</p>
+
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:0.5rem;">
+          <a href="https://www.vail.gov/government/departments/transportation-services/bus-information/bus-schedule-winter" target="_blank">Winter Bus Schedule →</a>
+          <a href="https://ride.vail.gov/" target="_blank">Live Bus Tracker →</a>
+        </div>
       </div>
       <div class="transport-card">
         <h3>📱 Uber & Lyft in Vail</h3>
@@ -997,11 +1021,17 @@ h1, h2, h3, h4 {
       </div>
     </div>
 
-    <!-- Embedded Google Map -->
-    <div style="margin-top:2rem;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);">
-      <iframe
-        src="https://maps.google.com/maps?q=5174+Main+Gore+Dr+S,+Vail,+CO+81657&t=&z=14&ie=UTF8&iwloc=&output=embed"
-        width="100%" height="350" style="border:0;display:block;" allowfullscreen="" loading="lazy"></iframe>
+    <!-- Google Map: Walking directions from house to nearest bus stop -->
+    <div style="margin-top:2rem;">
+      <p style="text-align:center;font-size:0.95rem;color:#4a5568;margin-bottom:0.8rem;font-weight:600;">📍 House → 🚌 Nearest Bus Stop (0.4 mi walk)</p>
+      <div style="border-radius:12px;overflow:hidden;box-shadow:var(--shadow);">
+        <iframe
+          src="https://maps.google.com/maps?saddr=5174+Main+Gore+Dr+S,+Vail,+CO+81657&daddr=Main+Gore+Dr+%26+Bighorn+Rd,+Vail,+CO+81657&dirflg=w&output=embed"
+          width="100%" height="400" style="border:0;display:block;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <p style="text-align:center;margin-top:0.5rem;">
+        <a href="https://www.google.com/maps/dir/5174+Main+Gore+Dr+S,+Vail,+CO+81657/Main+Gore+Dr+%26+Bighorn+Rd,+Vail,+CO+81657/@39.6398,-106.3127,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x0:0x0!2m2!1d-106.3059!2d39.6391!1m5!1m1!1s0x0:0x0!2m2!1d-106.3127!2d39.6405!3e2" target="_blank" style="color:var(--pine);font-weight:600;text-decoration:none;font-size:0.9rem;">Open Walking Directions in Google Maps →</a>
+      </p>
     </div>
   </div>
 </section>
