@@ -52,7 +52,7 @@ h1, h2, h3, h4 {
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(26,32,44,0.35) 0%, rgba(26,32,44,0.55) 100%),
-    url('https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1920&q=80') center/cover no-repeat;
+    url('images/Vail_cover.png') center/cover no-repeat;
 }
 
 .hero::after {
@@ -380,11 +380,7 @@ h1, h2, h3, h4 {
 .room-card-img {
   width: 100%;
   height: 160px;
-  background: linear-gradient(135deg, var(--ice), var(--sky-light));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
+  object-fit: cover;
 }
 
 .room-card-body {
@@ -765,6 +761,99 @@ h1, h2, h3, h4 {
   color: var(--gold-light);
 }
 
+/* ── TRISH INTRO ── */
+.trish-intro {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.trish-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--gold);
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 1.5rem;
+}
+
+.trish-quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--slate);
+  margin: 1.5rem auto;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* ── HOW IT WORKS ── */
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.how-step {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.how-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--gold);
+  color: var(--deep);
+  border-radius: 50%;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.how-step h4 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  color: var(--deep);
+}
+
+.how-step p {
+  font-size: 0.88rem;
+  color: #4a5568;
+}
+
+/* ── SIGNUP TABLE ── */
+.avail-table td input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-size: 0.78rem;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--deep);
+  outline: none;
+  padding: 0;
+}
+
+.avail-table td input::placeholder {
+  color: transparent;
+}
+
+.avail-table td:hover input::placeholder {
+  color: #a0aec0;
+}
+
+.avail-table .booked {
+  background: #fed7d7;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 640px) {
   .hero-stats { gap: 0.8rem; }
@@ -807,23 +896,46 @@ h1, h2, h3, h4 {
   </div>
 </section>
 
-<!-- ═══════ INVITE ═══════ -->
-<section class="section">
+<!-- ═══════ MEET THE BIRTHDAY QUEEN ═══════ -->
+<section class="trish-intro">
+  <img src="images/Trish_40th.png" alt="Trish" class="trish-photo">
+  <h2 style="font-size:clamp(1.8rem,4vw,2.5rem);color:var(--deep);margin-bottom:0.5rem;">Trish Is Turning 40!</h2>
+  <p style="color:#718096;font-size:1.05rem;margin-bottom:0.5rem;">And we're heading to the mountains to celebrate her in style.</p>
+  <p style="color:#718096;font-size:1.05rem;margin-bottom:1rem;">You're invited to join us for a week in Vail—come for one night or stay for all seven. We'd love to have you there!</p>
+  <p class="trish-quote">"Snow, mountains, family, and my best friends."</p>
+  <p style="font-size:0.9rem;color:var(--gold);font-weight:500;">— Trish</p>
+</section>
+
+<!-- ═══════ HOW IT WORKS ═══════ -->
+<section class="section section-alt">
   <div class="section-header">
-    <h2>You're Invited!</h2>
-    <p>We're gathering in Vail to celebrate Trish—her warmth, her spirit, and all the joy she brings to our lives.</p>
+    <h2>How It Works</h2>
+    <p>I've already booked a stunning mountain chalet in East Vail with incredible Gore Range views. Here's how to join the celebration!</p>
   </div>
-  <div class="invite-box">
-    <p>This trip is about creating memories together in the mountains, and <strong>you're invited to join us for any or all of it!</strong></p>
-    <ul class="invite-list">
-      <li><strong>Come for 1 night or all 7</strong> — Whatever works for your schedule!</li>
-      <li><strong>Reserve your room below</strong> — First come, first serve on room selection</li>
-      <li><strong>$300 suggested contribution per room/night</strong> — Coordinate payment with Niki Reid. If this is a stretch financially, please reach out—we want you there!</li>
-      <li><strong>Covers accommodation only</strong> — Ski tickets, meals, and rentals are separate</li>
-      <li><strong>Let us know by February 28th</strong> — We may downsize the house if needed</li>
-      <li><strong>Prefer to stay elsewhere?</strong> — No hard feelings at all! Book your own place and join us for activities, meals, and celebrations. We just want to spend time with you!</li>
-    </ul>
+  <div class="how-steps">
+    <div class="how-step">
+      <div class="how-step-num">1</div>
+      <h4>Pick Your Dates</h4>
+      <p>Come for 1 night or all 7—whatever works for your schedule. March 14–21, 2026.</p>
+    </div>
+    <div class="how-step">
+      <div class="how-step-num">2</div>
+      <h4>Reserve Your Room</h4>
+      <p>Choose from 6 bedrooms below. First come, first serve! Rooms can be shared.</p>
+    </div>
+    <div class="how-step">
+      <div class="how-step-num">3</div>
+      <h4>Contribute $300/Night</h4>
+      <p>Suggested per room/night. Coordinate payment with Niki. If this is a stretch, please reach out—we want you there!</p>
+    </div>
+    <div class="how-step">
+      <div class="how-step-num">4</div>
+      <h4>Show Up & Celebrate!</h4>
+      <p>Accommodation is covered. Just plan your travel, ski tickets, and get ready for an unforgettable week.</p>
+    </div>
   </div>
+  <p style="text-align:center;margin-top:2rem;font-size:0.92rem;color:#718096;">Prefer to stay elsewhere? No hard feelings! Book your own place and join us for activities, meals, and celebrations.</p>
+  <p style="text-align:center;margin-top:0.5rem;font-size:0.92rem;color:var(--gold);font-weight:600;">RSVP by February 28th — we may downsize the house if needed.</p>
 </section>
 
 <!-- ═══════ GETTING AROUND ═══════ -->
@@ -840,20 +952,20 @@ h1, h2, h3, h4 {
       </div>
       <div class="transport-card">
         <h3>✈️ From Denver (DEN) or Eagle (EGE)</h3>
-        <p><strong>Eagle Airport (EGE):</strong> Only 35 minutes to Vail. Seasonal flights available. Uber/Lyft ~$50–80.</p>
-        <p><strong>Denver Airport (DEN):</strong> ~2 hours to Vail via I-70. Uber/Lyft ~$250+ or shuttle services ~$80–100/person.</p>
+        <p><strong>Eagle Airport (EGE):</strong> 30 miles / ~35 minutes to Vail. Seasonal flights available. Uber/Lyft ~$50–80.</p>
+        <p><strong>Denver Airport (DEN):</strong> 100 miles / ~2 hours to Vail via I-70. Uber/Lyft ~$250+ or shuttle services ~$80–100/person.</p>
         <a href="https://www.epicmountainexpress.com/" target="_blank">Epic Mountain Express Shuttle →</a>
       </div>
       <div class="transport-card">
         <h3>🚗 Rental Car (Recommended)</h3>
-        <p>AWD or 4WD is <strong>strongly recommended</strong> in winter due to mountain roads and I-70 conditions. The house has a 2-car garage + 2 additional parking spaces.</p>
-        <p>Alternatively, carpool with others in the group!</p>
+        <p>AWD or 4WD is <strong>strongly recommended—one per family</strong> is ideal. Mountain roads and I-70 conditions require it in winter. We'll coordinate specifics closer to the trip!</p>
+        <p>The house has a 2-car garage + 2 additional parking spaces. Carpool with others in the group to save!</p>
       </div>
       <div class="transport-card">
-        <h3>📍 Property Address</h3>
+        <h3>📍 Property Location</h3>
         <p style="font-weight:600;font-size:1rem;">East Vail, Colorado</p>
-        <p>Located at the end of a quiet cul-de-sac with stunning Gore Range views. 10-minute drive to Vail Village.</p>
-        <a href="https://maps.google.com/?q=East+Vail,+Colorado" target="_blank">Open in Google Maps →</a>
+        <p>Near Grouse Lane in East Vail. Located at the end of a quiet cul-de-sac with stunning Gore Range views. 10-minute drive to Vail Village.</p>
+        <p style="font-size:0.85rem;color:#718096;margin-top:0.5rem;">Exact address will be shared closer to the trip once the Airbnb releases it.</p>
       </div>
     </div>
   </div>
@@ -869,11 +981,9 @@ h1, h2, h3, h4 {
     <a href="https://www.airbnb.com/rooms/1598030359586694222" target="_blank">View full Airbnb listing →</a> (already booked for our group)
   </div>
   <div class="house-gallery">
-    <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1598030359586694222/original/07034f0a-74a0-4a00-b92b-176d697cba8c.jpeg?im_w=720" alt="Mountain chalet exterior">
-    <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1598030359586694222/original/789ff0cb-740f-40c5-8dc4-979825da3288.jpeg?im_w=720" alt="Living area with mountain views">
-    <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1598030359586694222/original/322b51b0-b52f-405a-84ff-b02cde83f8c8.jpeg?im_w=720" alt="Kitchen and dining area">
-    <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1598030359586694222/original/589d0c3c-0c64-48e3-8cf0-f5c7ab5b774d.jpeg?im_w=720" alt="Bedroom">
-    <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1598030359586694222/original/b2d8c8e7-be7a-4e76-991d-582658d92f67.jpeg?im_w=720" alt="Outdoor area">
+    <img src="images/House Exterior.png" alt="Mountain chalet exterior">
+    <img src="images/House Interior 1.png" alt="Dining area with mountain views">
+    <img src="images/House Interior 2.png" alt="Living room with fireplace">
   </div>
   <div style="max-width:780px;margin:0 auto;">
     <div class="invite-box" style="font-size:0.92rem;">
@@ -903,7 +1013,7 @@ h1, h2, h3, h4 {
   <div style="max-width:1100px;margin:0 auto;">
     <div class="rooms-grid">
       <div class="room-card">
-        <div class="room-card-img">👑</div>
+        <img class="room-card-img" src="images/Room 6 - 1 King Bed (5th floor).png" alt="Master King">
         <div class="room-card-body">
           <h3>Master King</h3>
           <div class="room-detail">1 King Bed + Sofa, TV</div>
@@ -911,7 +1021,7 @@ h1, h2, h3, h4 {
         </div>
       </div>
       <div class="room-card">
-        <div class="room-card-img">🛏️</div>
+        <img class="room-card-img" src="images/Room 1 - 1 Queen Bed (1st floor).png" alt="Queen #1">
         <div class="room-card-body">
           <h3>Queen #1</h3>
           <div class="room-detail">1 Queen Bed</div>
@@ -919,7 +1029,7 @@ h1, h2, h3, h4 {
         </div>
       </div>
       <div class="room-card">
-        <div class="room-card-img">🛏️</div>
+        <img class="room-card-img" src="images/Room 2 - 1 Queen Bed (1st floor).png" alt="Queen #2">
         <div class="room-card-body">
           <h3>Queen #2</h3>
           <div class="room-detail">1 Queen Bed</div>
@@ -927,7 +1037,7 @@ h1, h2, h3, h4 {
         </div>
       </div>
       <div class="room-card">
-        <div class="room-card-img">🛏️</div>
+        <img class="room-card-img" src="images/Room 4 - 1 Queen Bed (2nd floor).png" alt="Queen #3">
         <div class="room-card-body">
           <h3>Queen #3</h3>
           <div class="room-detail">1 Queen Bed, TV</div>
@@ -935,7 +1045,7 @@ h1, h2, h3, h4 {
         </div>
       </div>
       <div class="room-card">
-        <div class="room-card-img">🛏️</div>
+        <img class="room-card-img" src="images/Room 5 - 1 Queen Bed (4th floor).png" alt="Queen #4">
         <div class="room-card-body">
           <h3>Queen #4</h3>
           <div class="room-detail">1 Queen Bed</div>
@@ -943,7 +1053,7 @@ h1, h2, h3, h4 {
         </div>
       </div>
       <div class="room-card">
-        <div class="room-card-img">🛏️</div>
+        <img class="room-card-img" src="images/Room 3 - 2 Twin Beds (1st floor).png" alt="Twin Room">
         <div class="room-card-body">
           <h3>Twin Room</h3>
           <div class="room-detail">2 Single Beds</div>
@@ -973,16 +1083,16 @@ h1, h2, h3, h4 {
           </tr>
         </thead>
         <tbody>
-          <tr><td>Master King</td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td></tr>
-          <tr><td>Queen #1</td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td></tr>
-          <tr><td>Queen #2</td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td></tr>
-          <tr><td>Queen #3</td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td></tr>
-          <tr><td>Queen #4</td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td></tr>
-          <tr><td>Twin Room</td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td></tr>
+          <tr data-room="master-king"><td>Master King</td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td></tr>
+          <tr data-room="queen-1"><td>Queen #1</td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td></tr>
+          <tr data-room="queen-2"><td>Queen #2</td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td></tr>
+          <tr data-room="queen-3"><td>Queen #3</td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td></tr>
+          <tr data-room="queen-4"><td>Queen #4</td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td></tr>
+          <tr data-room="twin"><td>Twin Room</td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td><td class="avail"></td></tr>
         </tbody>
       </table>
     </div>
-    <p class="avail-note"><strong>Note:</strong> $300 suggested contribution per room/night. Rooms can be shared by multiple people! This covers accommodation only—ski tickets, meals, and rentals are separate.</p>
+    <p class="avail-note"><strong>Click any cell to sign up!</strong> Type your name and it saves automatically. $300 suggested contribution per room/night. Rooms can be shared—just add both names!</p>
   </div>
 </section>
 
@@ -1040,26 +1150,50 @@ h1, h2, h3, h4 {
   <div style="max-width:1100px;margin:0 auto;">
     <div class="activities-grid">
       <div class="activity-card">
-        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80" alt="Vail Village" class="activity-img">
+        <img src="https://cdn-ekpbg.nitrocdn.com/rpTbUxaLyPbSJJmMNSMGaixAOxGImfFr/assets/images/optimized/rev-c7b2352/sonnenalp.com/wp-content/uploads/2022/06/Vail-Village-Sonnenalp.jpg" alt="Vail Village" class="activity-img">
         <div class="activity-body">
           <h3>Vail Village & Lionshead</h3>
           <p>Charming Bavarian-inspired villages with world-class shopping, art galleries, restaurants, and a lively après-ski scene. Free gondola rides for scenic views.</p>
-          <a href="https://discovervail.com/" target="_blank">Explore Vail Village →</a>
+          <a href="https://sonnenalp.com/vail-village/" target="_blank">Explore Vail Village →</a>
         </div>
       </div>
       <div class="activity-card">
-        <img src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=600&q=80" alt="Dog Sledding" class="activity-img">
+        <img src="https://www.mountainmusher.com/uploads/b/d7c0e5ce952a1fc5269cbe1270ab5624c3cee814fa408438cabfd5fd62665b17/2024-07-04_06-25-50_1720095989.jpg" alt="Dog Sledding" class="activity-img">
         <div class="activity-body">
-          <h3>Adventure Activities</h3>
-          <p>Dog sledding, snowmobiling, snowshoeing, snow tubing, ice climbing, and horse-drawn sleigh rides with dinner at 4 Eagle Ranch.</p>
-          <a href="https://discovervail.com/blog/winter-in-vail-activities-reservations/" target="_blank">View Activities →</a>
+          <h3>Dog Sledding</h3>
+          <p>Experience the thrill of mushing through the Colorado backcountry with Mountain Musher—making magical memories since 1989. A once-in-a-lifetime adventure!</p>
+          <a href="https://www.mountainmusher.com/" target="_blank">Book Dog Sledding →</a>
+        </div>
+      </div>
+      <div class="activity-card">
+        <img src="https://media-cdn.tripadvisor.com/media/photo-s/28/49/a3/5d/vail-backcountry-tours.jpg" alt="Snowmobiling" class="activity-img">
+        <div class="activity-body">
+          <h3>Snowmobiling</h3>
+          <p>Explore Vail's stunning backcountry on a guided snowmobile tour. Ride through pristine powder with incredible mountain views all around you.</p>
+          <a href="https://vailbackcountrytours.com/" target="_blank">Book Snowmobiling →</a>
+        </div>
+      </div>
+      <div class="activity-card">
+        <img src="https://discovervail.com/app/uploads/2023/10/20230227_Cohen_VLMD_Snowshoe_823-Edit-2048x1363-1-e1698186220478-1800x971.webp" alt="Snowshoeing" class="activity-img">
+        <div class="activity-body">
+          <h3>Snowshoeing</h3>
+          <p>Explore serene winter trails around Vail on snowshoes. Perfect for all fitness levels with guided and self-guided options through beautiful mountain scenery.</p>
+          <a href="https://discovervail.com/things-to-do/snowshoeing/" target="_blank">Snowshoeing Guide →</a>
+        </div>
+      </div>
+      <div class="activity-card">
+        <img src="https://hotspringspool.com/wp-content/uploads/2024/11/grand-pool.png" alt="Glenwood Hot Springs" class="activity-img">
+        <div class="activity-body">
+          <h3>Glenwood Hot Springs</h3>
+          <p>The world's largest mineral hot springs pool—just one hour from Vail. Perfect recovery day after skiing. Also check out Iron Mountain Hot Springs.</p>
+          <a href="https://hotspringspool.com/hot_springs/pools/" target="_blank">Visit Glenwood Springs →</a>
         </div>
       </div>
       <div class="activity-card">
         <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Spa" class="activity-img">
         <div class="activity-body">
           <h3>Spa & Wellness</h3>
-          <p>World-class spas at The Sebastian, Four Seasons Vail, and The Arrabelle. Or take a day trip to Glenwood Hot Springs (1 hour away).</p>
+          <p>World-class spas at The Sebastian, Four Seasons Vail, and The Arrabelle. The perfect way to unwind after a day on the slopes.</p>
           <a href="https://www.fourseasons.com/vail/spa/" target="_blank">Spa Options →</a>
         </div>
       </div>
@@ -1067,7 +1201,7 @@ h1, h2, h3, h4 {
         <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&q=80" alt="Ice Skating" class="activity-img">
         <div class="activity-body">
           <h3>Ice Skating</h3>
-          <p>Outdoor skating at Solaris Plaza (Vail Village) or Arrabelle Square (Lionshead)—surrounded by twinkling lights and mountain views. Rentals available on-site.</p>
+          <p>Outdoor skating at Solaris Plaza (Vail Village) or Arrabelle Square (Lionshead)—surrounded by twinkling lights and mountain views.</p>
           <a href="https://discovervail.com/" target="_blank">Learn More →</a>
         </div>
       </div>
@@ -1077,14 +1211,6 @@ h1, h2, h3, h4 {
           <h3>Dining & Après-Ski</h3>
           <p>From mountaintop dining at The 10th to lively après at Express Lift Bar and Garfinkel's. Don't miss the legendary cookies at Beaver Creek!</p>
           <a href="https://discovervail.com/dining-guide/" target="_blank">Dining Guide →</a>
-        </div>
-      </div>
-      <div class="activity-card">
-        <img src="https://images.unsplash.com/photo-1482192505345-5655af888cc4?w=600&q=80" alt="Glenwood Springs" class="activity-img">
-        <div class="activity-body">
-          <h3>Glenwood Hot Springs</h3>
-          <p>The world's largest mineral hot springs pool—just one hour from Vail. Perfect recovery day after skiing. Also check out Iron Mountain Hot Springs.</p>
-          <a href="https://www.hotspringspool.com/" target="_blank">Visit Glenwood Springs →</a>
         </div>
       </div>
     </div>
@@ -1228,6 +1354,80 @@ function updateCountdown() {
 }
 updateCountdown();
 setInterval(updateCountdown, 1000);
+</script>
+
+<!-- ═══════ FIREBASE SDK ═══════ -->
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
+
+<!-- ═══════ SIGN-UP SHEET (FIREBASE REAL-TIME) ═══════ -->
+<script>
+(function() {
+  var firebaseConfig = {
+    apiKey: "***REMOVED***",
+    authDomain: "trish-40th-bday.firebaseapp.com",
+    databaseURL: "https://trish-40th-bday-default-rtdb.firebaseio.com",
+    projectId: "trish-40th-bday",
+    storageBucket: "trish-40th-bday.firebasestorage.app",
+    messagingSenderId: "471829984132",
+    appId: "1:471829984132:web:6f51b7fcaa38c0b9a9e3d1"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  var db = firebase.database();
+
+  var dates = ['mar-14','mar-15','mar-16','mar-17','mar-18','mar-19','mar-20','mar-21'];
+
+  document.querySelectorAll('.avail-table tbody tr').forEach(function(row) {
+    var room = row.dataset.room;
+    if (!room) return;
+
+    row.querySelectorAll('td.avail').forEach(function(cell, i) {
+      var path = 'signups/' + room + '/' + dates[i];
+      var input = document.createElement('input');
+      input.type = 'text';
+      input.placeholder = 'Your name';
+      input.maxLength = 30;
+
+      // Real-time listener — updates for ALL visitors instantly
+      db.ref(path).on('value', function(snapshot) {
+        var val = snapshot.val() || '';
+        // Don't overwrite while the user is actively typing
+        if (input !== document.activeElement) {
+          input.value = val;
+        }
+        if (val) {
+          cell.classList.add('booked');
+        } else {
+          cell.classList.remove('booked');
+        }
+      });
+
+      // Save to Firebase on input (debounced to avoid excessive writes)
+      var timeout;
+      input.addEventListener('input', function() {
+        var val = this.value.trim();
+        clearTimeout(timeout);
+        // Immediate visual feedback
+        if (val) {
+          cell.classList.add('booked');
+        } else {
+          cell.classList.remove('booked');
+        }
+        // Debounced write to Firebase
+        timeout = setTimeout(function() {
+          if (val) {
+            db.ref(path).set(val);
+          } else {
+            db.ref(path).remove();
+          }
+        }, 500);
+      });
+
+      cell.appendChild(input);
+    });
+  });
+})();
 </script>
 </body>
 </html>
