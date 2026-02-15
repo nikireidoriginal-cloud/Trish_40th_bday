@@ -884,6 +884,91 @@ h1, h2, h3, h4 {
   background: #fed7d7;
 }
 
+/* ── TRAVEL PLAN FORM ── */
+.travel-form-group {
+  margin-bottom: 0.8rem;
+}
+
+.travel-form-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--deep);
+  margin-bottom: 0.25rem;
+}
+
+.travel-form-group input,
+.travel-form-group select {
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--slate);
+  background: #fff;
+}
+
+.travel-form-group input:focus,
+.travel-form-group select:focus {
+  outline: none;
+  border-color: var(--pine);
+  box-shadow: 0 0 0 2px rgba(47,82,51,0.12);
+}
+
+.travel-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.travel-leg {
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.travel-add-leg {
+  background: none;
+  border: 1px dashed #cbd5e0;
+  border-radius: 6px;
+  padding: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #718096;
+  font-family: 'DM Sans', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.travel-add-leg:hover {
+  border-color: var(--pine);
+  color: var(--pine);
+}
+
+.travel-submit {
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--pine);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.2s;
+}
+
+.travel-submit:hover {
+  background: var(--pine-light);
+}
+
+@media (max-width: 640px) {
+  .travel-form-row { grid-template-columns: 1fr; }
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 640px) {
   .hero-stats { gap: 0.8rem; }
@@ -1050,10 +1135,14 @@ h1, h2, h3, h4 {
       </p>
     </div>
 
-    <!-- Trish & Family Flights -->
+    <!-- Everyone's Travel Plans -->
     <div style="margin-top:2.5rem;max-width:780px;margin-left:auto;margin-right:auto;">
-      <div class="invite-box" style="border-top:3px solid var(--gold);">
-        <h3 style="margin-bottom:1.2rem;text-align:center;">✈️ Trish & Family — Flight Details</h3>
+      <h3 style="text-align:center;font-size:1.3rem;color:var(--deep);margin-bottom:1.5rem;">✈️ Everyone's Travel Plans</h3>
+      <p style="text-align:center;font-size:0.92rem;color:#718096;margin-bottom:2rem;">Share your flight details with Niki so we can coordinate rides from the airport!</p>
+
+      <!-- Trish & Family -->
+      <div class="invite-box" style="border-top:3px solid var(--gold);margin-bottom:1.5rem;">
+        <h3 style="margin-bottom:1.2rem;text-align:center;">Trish & Family</h3>
 
         <!-- Arriving -->
         <div style="margin-bottom:1.5rem;">
@@ -1078,6 +1167,14 @@ h1, h2, h3, h4 {
           <div style="font-size:0.8rem;color:var(--pine);margin-top:0.5rem;text-align:center;">40 min connection at IAD · Arrives Vail/Eagle at 2:49 PM — just in time for 4 PM check-in!</div>
         </div>
 
+        <!-- Transport -->
+        <div style="margin-bottom:1.5rem;">
+          <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+            <span style="background:var(--gold);color:var(--deep);font-size:0.75rem;font-weight:600;padding:0.25rem 0.7rem;border-radius:4px;text-transform:uppercase;letter-spacing:0.05em;">Transport</span>
+          </div>
+          <div style="font-size:0.9rem;color:#4a5568;">Rental car from Eagle (EGE) — 35 min drive to Vail</div>
+        </div>
+
         <!-- Departing -->
         <div>
           <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.8rem;">
@@ -1085,12 +1182,179 @@ h1, h2, h3, h4 {
             <span style="font-size:0.85rem;color:#718096;">Confirmation: <strong style="color:var(--deep);">OJ65C7</strong></span>
           </div>
           <div style="background:#f7fafc;border-radius:8px;padding:1rem;max-width:50%;">
-            <div style="font-size:0.78rem;color:#718096;margin-bottom:0.3rem;">UA259 · United</div>
+            <div style="font-size:0.78rem;color:#718096;margin-bottom:0.3rem;">UA 259 · United</div>
             <div style="font-weight:600;color:var(--deep);font-size:0.95rem;">Sat, Mar 21, 2026</div>
             <div style="font-size:0.9rem;color:#4a5568;margin-top:0.3rem;">5:44 PM <strong>DEN</strong> → 11:25 PM <strong>MCO</strong></div>
             <div style="font-size:0.78rem;color:#718096;margin-top:0.2rem;">Denver → Orlando</div>
           </div>
         </div>
+      </div>
+
+      <!-- Tina + Kendall -->
+      <div class="invite-box" style="border-top:3px solid var(--sky);margin-bottom:1.5rem;">
+        <h3 style="margin-bottom:1.2rem;text-align:center;">Tina & Kendall</h3>
+
+        <!-- Arriving -->
+        <div style="margin-bottom:1.5rem;">
+          <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.8rem;">
+            <span style="background:var(--pine);color:#fff;font-size:0.75rem;font-weight:600;padding:0.25rem 0.7rem;border-radius:4px;text-transform:uppercase;letter-spacing:0.05em;">Arriving</span>
+          </div>
+          <div style="background:#f7fafc;border-radius:8px;padding:1rem;max-width:50%;">
+            <div style="font-size:0.78rem;color:#718096;margin-bottom:0.3rem;">UA 1022 · United Economy (XN)</div>
+            <div style="font-weight:600;color:var(--deep);font-size:0.95rem;">Tue, Mar 17, 2026</div>
+            <div style="font-size:0.9rem;color:#4a5568;margin-top:0.3rem;">9:36 AM <strong>MCO</strong> → 12:00 PM <strong>DEN</strong></div>
+            <div style="font-size:0.78rem;color:#718096;margin-top:0.2rem;">Orlando → Denver</div>
+          </div>
+        </div>
+
+        <!-- Transport -->
+        <div style="margin-bottom:1.5rem;">
+          <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+            <span style="background:var(--gold);color:var(--deep);font-size:0.75rem;font-weight:600;padding:0.25rem 0.7rem;border-radius:4px;text-transform:uppercase;letter-spacing:0.05em;">Transport</span>
+          </div>
+          <div style="font-size:0.9rem;color:#718096;font-style:italic;">TBD — needs ride from Denver (DEN) to Vail (~2 hrs)</div>
+        </div>
+
+        <!-- Departing -->
+        <div>
+          <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.8rem;">
+            <span style="background:var(--sky);color:#fff;font-size:0.75rem;font-weight:600;padding:0.25rem 0.7rem;border-radius:4px;text-transform:uppercase;letter-spacing:0.05em;">Departing</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;">
+            <div style="background:#f7fafc;border-radius:8px;padding:1rem;">
+              <div style="font-size:0.78rem;color:#718096;margin-bottom:0.3rem;">Flight 1 · DL 362 · Delta Comfort (S)</div>
+              <div style="font-weight:600;color:var(--deep);font-size:0.95rem;">Sat, Mar 21, 2026</div>
+              <div style="font-size:0.9rem;color:#4a5568;margin-top:0.3rem;">12:35 AM <strong>DEN</strong> → 5:22 AM <strong>DTW</strong></div>
+              <div style="font-size:0.78rem;color:#718096;margin-top:0.2rem;">Denver → Detroit</div>
+            </div>
+            <div style="background:#f7fafc;border-radius:8px;padding:1rem;">
+              <div style="font-size:0.78rem;color:#718096;margin-bottom:0.3rem;">Flight 2 · DL 1709 · Delta Comfort (S)</div>
+              <div style="font-weight:600;color:var(--deep);font-size:0.95rem;">Sat, Mar 21, 2026</div>
+              <div style="font-size:0.9rem;color:#4a5568;margin-top:0.3rem;">6:15 AM <strong>DTW</strong> → 8:58 AM <strong>MCO</strong></div>
+              <div style="font-size:0.78rem;color:#718096;margin-top:0.2rem;">Detroit → Orlando</div>
+            </div>
+          </div>
+          <div style="font-size:0.8rem;color:var(--pine);margin-top:0.5rem;text-align:center;">Red-eye departure · 53 min connection at DTW · Home by 8:58 AM</div>
+        </div>
+      </div>
+
+      <!-- Dynamic travel plans from Firebase -->
+      <div id="travel-plans-dynamic"></div>
+
+      <!-- Add Your Travel Plans Form -->
+      <div class="invite-box" style="border-top:3px solid var(--pine);" id="travel-form-card">
+        <h3 style="margin-bottom:0.3rem;text-align:center;">Add Your Travel Plans</h3>
+        <p style="font-size:0.88rem;color:#718096;text-align:center;margin-bottom:1.2rem;">Fill in what you know — you can always update later!</p>
+        <form id="travel-form">
+          <div class="travel-form-group">
+            <label>Name(s)</label>
+            <input type="text" id="tp-name" placeholder="e.g. John & Jane" required>
+          </div>
+
+          <!-- Arriving -->
+          <div style="display:flex;align-items:center;gap:0.5rem;margin:1.2rem 0 0.8rem;">
+            <span style="background:var(--pine);color:#fff;font-size:0.75rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:4px;text-transform:uppercase;letter-spacing:0.05em;">Arriving</span>
+          </div>
+          <div class="travel-form-row" style="margin-bottom:0.8rem;">
+            <div class="travel-form-group">
+              <label>Date</label>
+              <input type="date" id="tp-arrive-date">
+            </div>
+            <div class="travel-form-group">
+              <label>Flying Into</label>
+              <select id="tp-arrive-airport">
+                <option value="DEN">Denver (DEN) — 2 hrs to Vail</option>
+                <option value="EGE">Eagle/Vail (EGE) — 35 min</option>
+              </select>
+            </div>
+          </div>
+          <div class="travel-leg">
+            <div class="travel-form-row">
+              <div class="travel-form-group">
+                <label>Flight #</label>
+                <input type="text" id="tp-arrive-flight1" placeholder="e.g. UA 1022">
+              </div>
+              <div class="travel-form-group">
+                <label>Route & Times</label>
+                <input type="text" id="tp-arrive-route1" placeholder="e.g. 9:36 AM MCO → 12:00 PM DEN">
+              </div>
+            </div>
+          </div>
+          <div id="tp-arrive-leg2" style="display:none;" class="travel-leg">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
+              <span style="font-size:0.8rem;color:#718096;font-weight:500;">Connection</span>
+              <button type="button" onclick="document.getElementById('tp-arrive-leg2').style.display='none';document.getElementById('tp-arrive-add').style.display='block';" style="background:none;border:none;color:#e53e3e;cursor:pointer;font-size:0.8rem;">Remove</button>
+            </div>
+            <div class="travel-form-row">
+              <div class="travel-form-group">
+                <label>Flight #</label>
+                <input type="text" id="tp-arrive-flight2" placeholder="e.g. UA 2048">
+              </div>
+              <div class="travel-form-group">
+                <label>Route & Times</label>
+                <input type="text" id="tp-arrive-route2" placeholder="e.g. 12:35 PM IAD → 2:49 PM EGE">
+              </div>
+            </div>
+          </div>
+          <button type="button" id="tp-arrive-add" class="travel-add-leg" onclick="document.getElementById('tp-arrive-leg2').style.display='block';this.style.display='none';">+ Add connecting flight</button>
+
+          <!-- Transport -->
+          <div style="display:flex;align-items:center;gap:0.5rem;margin:0.5rem 0 0.5rem;">
+            <span style="background:var(--gold);color:var(--deep);font-size:0.75rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:4px;text-transform:uppercase;letter-spacing:0.05em;">Transport to Vail</span>
+          </div>
+          <div class="travel-form-group">
+            <input type="text" id="tp-transport" placeholder="e.g. Rental car, Need a ride, Shuttle, Driving">
+          </div>
+
+          <!-- Departing -->
+          <div style="display:flex;align-items:center;gap:0.5rem;margin:1.2rem 0 0.8rem;">
+            <span style="background:var(--sky);color:#fff;font-size:0.75rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:4px;text-transform:uppercase;letter-spacing:0.05em;">Departing</span>
+          </div>
+          <div class="travel-form-row" style="margin-bottom:0.8rem;">
+            <div class="travel-form-group">
+              <label>Date</label>
+              <input type="date" id="tp-depart-date">
+            </div>
+            <div class="travel-form-group">
+              <label>Flying Out Of</label>
+              <select id="tp-depart-airport">
+                <option value="DEN">Denver (DEN)</option>
+                <option value="EGE">Eagle/Vail (EGE)</option>
+              </select>
+            </div>
+          </div>
+          <div class="travel-leg">
+            <div class="travel-form-row">
+              <div class="travel-form-group">
+                <label>Flight #</label>
+                <input type="text" id="tp-depart-flight1" placeholder="e.g. DL 362">
+              </div>
+              <div class="travel-form-group">
+                <label>Route & Times</label>
+                <input type="text" id="tp-depart-route1" placeholder="e.g. 12:35 AM DEN → 5:22 AM DTW">
+              </div>
+            </div>
+          </div>
+          <div id="tp-depart-leg2" style="display:none;" class="travel-leg">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
+              <span style="font-size:0.8rem;color:#718096;font-weight:500;">Connection</span>
+              <button type="button" onclick="document.getElementById('tp-depart-leg2').style.display='none';document.getElementById('tp-depart-add').style.display='block';" style="background:none;border:none;color:#e53e3e;cursor:pointer;font-size:0.8rem;">Remove</button>
+            </div>
+            <div class="travel-form-row">
+              <div class="travel-form-group">
+                <label>Flight #</label>
+                <input type="text" id="tp-depart-flight2" placeholder="e.g. DL 1709">
+              </div>
+              <div class="travel-form-group">
+                <label>Route & Times</label>
+                <input type="text" id="tp-depart-route2" placeholder="e.g. 6:15 AM DTW → 8:58 AM MCO">
+              </div>
+            </div>
+          </div>
+          <button type="button" id="tp-depart-add" class="travel-add-leg" onclick="document.getElementById('tp-depart-leg2').style.display='block';this.style.display='none';">+ Add connecting flight</button>
+
+          <button type="submit" class="travel-submit" style="margin-top:0.5rem;">Save My Travel Plans</button>
+        </form>
       </div>
     </div>
   </div>
@@ -1634,6 +1898,138 @@ setInterval(updateCountdown, 1000);
       });
 
       cell.appendChild(input);
+    });
+  });
+})();
+</script>
+
+<!-- ═══════ TRAVEL PLANS (FIREBASE REAL-TIME) ═══════ -->
+<script>
+(function() {
+  var db = firebase.database();
+  var tpRef = db.ref('travel-plans');
+  var container = document.getElementById('travel-plans-dynamic');
+  var form = document.getElementById('travel-form');
+
+  function formatDate(dateStr) {
+    if (!dateStr) return '';
+    var d = new Date(dateStr + 'T12:00:00');
+    var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return days[d.getDay()] + ', ' + months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+  }
+
+  function esc(str) {
+    var div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function renderLeg(flight, route) {
+    if (!flight && !route) return '';
+    return '<div style="background:#f7fafc;border-radius:8px;padding:1rem;">' +
+      (flight ? '<div style="font-size:0.78rem;color:#718096;margin-bottom:0.3rem;">' + esc(flight) + '</div>' : '') +
+      (route ? '<div style="font-size:0.9rem;color:#4a5568;">' + esc(route) + '</div>' : '') +
+      '</div>';
+  }
+
+  function renderCard(key, data) {
+    var html = '<div class="invite-box" style="border-top:3px solid var(--pine-light);margin-bottom:1.5rem;">';
+    html += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem;">';
+    html += '<h3 style="margin:0;text-align:center;flex:1;">' + esc(data.name) + '</h3>';
+    html += '<button onclick="if(confirm(\'Remove travel plans for ' + esc(data.name).replace(/'/g, "\\'") + '?\'))firebase.database().ref(\'travel-plans/' + key + '\').remove()" style="background:none;border:none;color:#a0aec0;cursor:pointer;font-size:0.78rem;padding:0.3rem 0.6rem;border-radius:4px;">remove</button>';
+    html += '</div>';
+
+    // Arriving
+    if (data.arrive && (data.arrive.flight1 || data.arrive.route1)) {
+      html += '<div style="margin-bottom:1.5rem;">';
+      html += '<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.8rem;">';
+      html += '<span style="background:var(--pine);color:#fff;font-size:0.75rem;font-weight:600;padding:0.25rem 0.7rem;border-radius:4px;text-transform:uppercase;letter-spacing:0.05em;">Arriving</span>';
+      if (data.arrive.date) html += '<span style="font-size:0.85rem;color:#718096;font-weight:600;">' + formatDate(data.arrive.date) + '</span>';
+      if (data.arrive.airport) html += '<span style="font-size:0.85rem;color:#718096;"> into <strong style="color:var(--deep);">' + esc(data.arrive.airport) + '</strong></span>';
+      html += '</div>';
+      var hasLeg2 = data.arrive.flight2 || data.arrive.route2;
+      html += '<div style="display:grid;grid-template-columns:' + (hasLeg2 ? '1fr 1fr' : '1fr') + ';gap:0.8rem;' + (hasLeg2 ? '' : 'max-width:50%;') + '">';
+      html += renderLeg(data.arrive.flight1, data.arrive.route1);
+      if (hasLeg2) html += renderLeg(data.arrive.flight2, data.arrive.route2);
+      html += '</div></div>';
+    }
+
+    // Transport
+    if (data.transport) {
+      html += '<div style="margin-bottom:1.5rem;">';
+      html += '<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">';
+      html += '<span style="background:var(--gold);color:var(--deep);font-size:0.75rem;font-weight:600;padding:0.25rem 0.7rem;border-radius:4px;text-transform:uppercase;letter-spacing:0.05em;">Transport</span>';
+      html += '</div>';
+      html += '<div style="font-size:0.9rem;color:#4a5568;">' + esc(data.transport) + '</div>';
+      html += '</div>';
+    }
+
+    // Departing
+    if (data.depart && (data.depart.flight1 || data.depart.route1)) {
+      html += '<div>';
+      html += '<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.8rem;">';
+      html += '<span style="background:var(--sky);color:#fff;font-size:0.75rem;font-weight:600;padding:0.25rem 0.7rem;border-radius:4px;text-transform:uppercase;letter-spacing:0.05em;">Departing</span>';
+      if (data.depart.date) html += '<span style="font-size:0.85rem;color:#718096;font-weight:600;">' + formatDate(data.depart.date) + '</span>';
+      if (data.depart.airport) html += '<span style="font-size:0.85rem;color:#718096;"> from <strong style="color:var(--deep);">' + esc(data.depart.airport) + '</strong></span>';
+      html += '</div>';
+      var hasDLeg2 = data.depart.flight2 || data.depart.route2;
+      html += '<div style="display:grid;grid-template-columns:' + (hasDLeg2 ? '1fr 1fr' : '1fr') + ';gap:0.8rem;' + (hasDLeg2 ? '' : 'max-width:50%;') + '">';
+      html += renderLeg(data.depart.flight1, data.depart.route1);
+      if (hasDLeg2) html += renderLeg(data.depart.flight2, data.depart.route2);
+      html += '</div></div>';
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  // Real-time listener — renders all travel plans
+  tpRef.orderByChild('timestamp').on('value', function(snapshot) {
+    var html = '';
+    snapshot.forEach(function(child) {
+      html += renderCard(child.key, child.val());
+    });
+    container.innerHTML = html;
+  });
+
+  // Form submission
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var name = document.getElementById('tp-name').value.trim();
+    if (!name) { alert('Please enter your name(s).'); return; }
+
+    var data = {
+      name: name,
+      arrive: {
+        date: document.getElementById('tp-arrive-date').value,
+        airport: document.getElementById('tp-arrive-airport').value,
+        flight1: document.getElementById('tp-arrive-flight1').value.trim(),
+        route1: document.getElementById('tp-arrive-route1').value.trim(),
+        flight2: document.getElementById('tp-arrive-flight2').value.trim(),
+        route2: document.getElementById('tp-arrive-route2').value.trim()
+      },
+      transport: document.getElementById('tp-transport').value.trim(),
+      depart: {
+        date: document.getElementById('tp-depart-date').value,
+        airport: document.getElementById('tp-depart-airport').value,
+        flight1: document.getElementById('tp-depart-flight1').value.trim(),
+        route1: document.getElementById('tp-depart-route1').value.trim(),
+        flight2: document.getElementById('tp-depart-flight2').value.trim(),
+        route2: document.getElementById('tp-depart-route2').value.trim()
+      },
+      timestamp: firebase.database.ServerValue.TIMESTAMP
+    };
+
+    tpRef.push(data).then(function() {
+      form.reset();
+      document.getElementById('tp-arrive-leg2').style.display = 'none';
+      document.getElementById('tp-arrive-add').style.display = 'block';
+      document.getElementById('tp-depart-leg2').style.display = 'none';
+      document.getElementById('tp-depart-add').style.display = 'block';
+      container.lastElementChild && container.lastElementChild.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }).catch(function(err) {
+      alert('Error saving: ' + err.message);
     });
   });
 })();
